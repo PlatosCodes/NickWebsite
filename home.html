@@ -183,33 +183,44 @@
     }
 
     #commercials .youtube-video {
-      position: relative;
-      display: block;
-    }
+  position: relative;
+  display: block;
+  background-color: transparent; /* Add this line */
+}
 
-    #commercials .youtube-thumbnail {
-      width: 100%;
-      height: 200px; 
-      padding: 0;
-      margin: 0;
-    }
+#commercials .youtube-thumbnail {
+  width: 100%;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+  object-fit: cover; /* Ensure image fills entire space */
+  border-radius: 0;  /* Remove border-radius */
+}
 
-    #commercials .youtube-play-button {
-      width: 70px;
-      height: 70px; 
-      background-image: url('PlayButton.png');
-      background-size: cover;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      transition: opacity .3s ease;
-    }
+#commercials .play-button-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+  opacity: 0;
+  transition: opacity .3s ease;
+}
 
-    #commercials .youtube-video:hover .youtube-play-button {
-      opacity: 1;
-    }
+#commercials .youtube-play-button {
+  width: 70px;
+  height: 70px; 
+  background-image: url('PlayButton.png');
+  background-size: cover;
+}
+
+#commercials .youtube-video:hover .play-button-wrapper {
+  opacity: 1;
+}
 
     #nick-title {
       color: #ea5555;
@@ -291,38 +302,63 @@
       <div class="row">
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <a data-fancybox data-type="iframe" href="https://youtube.com/embed/aN7DccHogPQ?autoplay=1" class="youtube-video" aria-label="Play YouTube video">
-          <img src="screenshot1.png" alt="Video thumbnail" class="youtube-thumbnail" loading="lazy">
-          <button class="youtube-play-button" aria-label="Play video"></button>
-        </a>
+          <img src="https://img.youtube.com/vi/aN7DccHogPQ/0.jpg" alt="Video thumbnail" class="youtube-thumbnail" loading="lazy">
+          <div class="play-button-wrapper">
+            <button class="youtube-play-button" aria-label="Play video"></button>
+          </div>        </a>
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <a data-fancybox data-type="iframe" href="https://youtube.com/embed/MhMwzEZS_y?autoplay=1" class="youtube-video" aria-label="Play YouTube video">
-          <img src="screenshot2.png" alt="Video thumbnail" class="youtube-thumbnail" loading="lazy">
-          <button class="youtube-play-button" aria-label="Play video"></button>
-        </a>
+        <a data-fancybox data-type="iframe" href="https://youtube.com/embed/Eq44QT_p2pk?autoplay=1" class="youtube-video" aria-label="Play YouTube video">
+          <img src="https://img.youtube.com/vi/Eq44QT_p2pk/0.jpg" alt="Video thumbnail" class="youtube-thumbnail" loading="lazy">
+          <div class="play-button-wrapper">
+            <button class="youtube-play-button" aria-label="Play video"></button>
+          </div>        </a>
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <a data-fancybox data-type="iframe" href="https://youtube.com/embed_VoqGRQFXes?autoplay=1" class="youtube-video" aria-label="Play YouTube video">
-          <img src="screenshot1.png" alt="Video thumbnail" class="youtube-thumbnail" loading="lazy">
-          <button class="youtube-play-button" aria-label="Play video"></button>
-        </a>
+        <a data-fancybox data-type="iframe" href="https://youtube.com/embed/_VoqGRQFXes?autoplay=1" class="youtube-video" aria-label="Play YouTube video">
+          <img src="https://img.youtube.com/vi/_VoqGRQFXes/0.jpg" alt="Video thumbnail" class="youtube-thumbnail" loading="lazy">
+          <div class="play-button-wrapper">
+            <button class="youtube-play-button" aria-label="Play video"></button>
+          </div>        </a>
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <a data-fancybox data-type="iframe" href="https://youtube.com/embed/vXI4Hq5-6k8?autoplay=1" class="youtube-video" aria-label="Play YouTube video">
-          <img src="screenshot2.png" alt="Video thumbnail" class="youtube-thumbnail" loading="lazy">
-          <button class="youtube-play-button" aria-label="Play video"></button>
-        </a>
+          <img src="https://img.youtube.com/vi/vXI4Hq5-6k8/0.jpg" alt="Video thumbnail" class="youtube-thumbnail" loading="lazy">
+          <div class="play-button-wrapper">
+            <button class="youtube-play-button" aria-label="Play video"></button>
+          </div>        </a>
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <a data-fancybox data-type="iframe" href="https://youtube.com/embed/d_GTEDLlI1s?autoplay=1" class="youtube-video" aria-label="Play YouTube video">
-          <img src="screenshot1.png" alt="Video thumbnail" class="youtube-thumbnail" loading="lazy">
-          <button class="youtube-play-button" aria-label="Play video"></button>
-        </a>
+          <img src="https://img.youtube.com/vi/d_GTEDLlI1s/0.jpg" alt="Video thumbnail" class="youtube-thumbnail" loading="lazy">
+          <div class="play-button-wrapper">
+            <button class="youtube-play-button" aria-label="Play video"></button>
+          </div>        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <a data-fancybox data-type="iframe" href="https://youtube.com/embed/MhMwzEZS_yM?autoplay=1" class="youtube-video" aria-label="Play YouTube video">
+          <img src="https://img.youtube.com/vi/MhMwzEZS_yM/0.jpg" alt="Video thumbnail" class="youtube-thumbnail" loading="lazy">
+          <div class="play-button-wrapper">
+            <button class="youtube-play-button" aria-label="Play video"></button>
+          </div>        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <a data-fancybox data-type="iframe" href="https://youtube.com/embed/7DydKXD4ck0?autoplay=1" class="youtube-video" aria-label="Play YouTube video">
+          <img src="https://img.youtube.com/vi/7DydKXD4ck0/0.jpg" alt="Video thumbnail" class="youtube-thumbnail" loading="lazy">
+          <div class="play-button-wrapper">
+            <button class="youtube-play-button" aria-label="Play video"></button>
+          </div>        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <a data-fancybox data-type="iframe" href="https://youtube.com/embed/qN_105nx4_o?autoplay=1" class="youtube-video" aria-label="Play YouTube video">
+          <img src="https://img.youtube.com/vi/qN_105nx4_o/0.jpg" alt="Video thumbnail" class="youtube-thumbnail" loading="lazy">
+          <div class="play-button-wrapper">
+            <button class="youtube-play-button" aria-label="Play video"></button>
+          </div>        </a>
       </div>
     </div>
   </section>
- 
-  <section id="about-me">
+    <section id="about-me">
     <div class="content">
       <div class="row">
         <div class="col-md-2"></div>
